@@ -16,17 +16,14 @@ for i in range(N):
         else:
             if line[j] == line[i] and dp[j+1][i-1] == 1:
                 dp[j][i] = 1
-#  이 아래부분을 모르겠음
+# 0번째부터 각 end위치까지의 최소 분할수를 min_cut에 저장
 min_cut = [2500 for _ in range(N+1)]
 min_cut[-1] = 0
-# 각 위치까지의 최소 분할수를 min_cut에 저장
 for end in range(N):
     for start in range(end+1):
-        if dp[start][end] == 1:
-            min_cut[end] = min(min_cut[end], min_cut[start-1]+1)
-        else:
-            min_cut[end] = min(min_cut[end], min_cut[end-1]+1)
-
+        if dp[start][end] == 1: # start-end가 P임
+            min_cut[end] = min(min_cut[end], min_cut[start-1]+1)    # 기존 값과 0-start구간 최솟값+start-end구간(1)을 비교
+        
 print(min_cut[-2])
 
 
