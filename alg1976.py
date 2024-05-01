@@ -1,9 +1,9 @@
 def find(x):
-    if unf[x] == x:
+    if unf[x] == x: # 내가 대빵
         return x
-    else:
-        unf[x] = find(unf[x])
-        return unf[x]
+    else:#나 말고 다른애가 대빵
+        unf[x] = find(unf[x])   # 내 대빵을 찾아서 설정
+        return unf[x]   # 대빵 반환
 
 def union(x, y):
     rootX = find(x)
