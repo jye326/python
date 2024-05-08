@@ -1,0 +1,1 @@
+{"name":"Local: alg4386","url":"c:\\Users\\juyon\\python\\alg4386.py","tests":[{"id":1715139842212,"input":"3\n1.0 1.0\n2.0 2.0\n2.0 4.0","output":"3.41"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\juyon\\python\\alg4386.py","group":"local","local":true}
