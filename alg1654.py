@@ -7,19 +7,19 @@
 #         total += line // H
 #     return total
 
-# def bin_find(bot, top):
-#     while(bot<top):
-#         mid = (bot + top)//2
-#         if count_len(mid) == N:
-#             while(count_len(mid)==N):
-#                 mid+=1
-#             mid -= 1
-#             return mid
-#         elif count_len(mid) > N:    # 갯수 초과 -> 더 길게 자를 수 있음
-#             bot = mid +1
-#         else:
-#             top = mid -1
-#     return bot
+def bin_find(bot, top):
+    while(bot<top):
+        mid = (bot + top)//2
+        if count_len(mid) == N:
+            while(count_len(mid)==N):
+                mid+=1
+            mid -= 1
+            return mid
+        elif count_len(mid) > N:    # 갯수 초과 -> 더 길게 자를 수 있음
+            bot = mid +1
+        else:
+            top = mid -1
+    return bot
 
 K, N = map(int, input().split())
 global lines

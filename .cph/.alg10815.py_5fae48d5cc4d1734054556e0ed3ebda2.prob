@@ -1,0 +1,1 @@
+{"name":"Local: alg10815","url":"c:\\Users\\juyon\\python\\alg10815.py","tests":[{"id":1717476252991,"input":"5\n6 3 2 10 -10\n8\n10 9 -5 2 3 4 5 -10","output":"1 0 0 1 1 0 0 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\juyon\\python\\alg10815.py","group":"local","local":true}
