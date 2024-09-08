@@ -4,6 +4,9 @@
 # 번호 작은 것부터 방문
 # 입력으로 주어지는 간선은 양방향
 
+from collections import deque
+
+
 # 1. 그래프 구현 2차원 연결리스트로 구현
 # 2. stack을 사용해서 DFS 탐색 구현
 # 그래프 입력
@@ -29,17 +32,29 @@ def dfs_recursion(graph:list, start:int, visited:list):
     
 
 # 4. queue를 사용해서 BFS 탐색 구현
+# def bfs_queue(graph:list, start:int, visited:list):
+#     q = list()
+#     q.append(start)
+#     while(len(q)!=0):
+#         now = q.pop(0)
+#         if not visited[now]:
+#             visited[now] = True
+#             for next in sorted(graph[now]):
+#                 if not visited[next]:# 연결된 노드 중 미방문 노드만 큐에 넣기
+#                     q.append(next)
+#             print(now, end = " ")
+
 def bfs_queue(graph:list, start:int, visited:list):
-    q = list()
+    q = deque() # 앞뒤에서 빼는 시간복잡도가 O(1)임
+    visited[start] = True #queue에 넣기 전에 방문 처리
     q.append(start)
-    while(len(q)!=0):
-        now = q.pop(0)
-        if not visited[now]:
-            visited[now] = True
-            for next in sorted(graph[now]):
-                if not visited[next]:# 연결된 노드 중 미방문 노드만 큐에 넣기
-                    q.append(next)
-            print(now, end = " ")
+    while q: #이게 된다고?
+        now = q.popleft() # deque에서 queue처럼
+        for next in graph[now]: # 미리 정렬된 상태에서 탐색
+            if not visited[next]:
+                visited[next] = True    # 큐에 넣기 전에 방문 체크 하는 방법
+                q.append(next)
+        print(now, end = " ")
 
 
 
@@ -51,6 +66,9 @@ for _ in range(M):
     s, e = map(int, input().split())
     graph[s].append(e)
     graph[e].append(s)
+
+for adj in graph:#입력시에 인접노드 번호 정렬
+    adj.sort()
 
 visited1 = [False for _ in range(N+1)]
 visited2 = [False for _ in range(N+1)]
