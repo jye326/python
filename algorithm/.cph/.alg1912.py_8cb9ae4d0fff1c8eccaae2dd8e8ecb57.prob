@@ -1,0 +1,1 @@
+{"name":"Local: alg1912","url":"c:\\Users\\juyon\\python\\algorithm\\alg1912.py","tests":[{"id":1726066157431,"input":"10\n10 -4 3 1 5 6 -35 12 21 -1","output":"33"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\juyon\\python\\algorithm\\alg1912.py","group":"local","local":true}
