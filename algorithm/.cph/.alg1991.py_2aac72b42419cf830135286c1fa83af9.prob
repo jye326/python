@@ -1,0 +1,1 @@
+{"name":"Local: alg1991","url":"c:\\Users\\juyon\\python\\algorithm\\alg1991.py","tests":[{"id":1726409769201,"input":"7\nA B C\nB D .\nC E F\nE . .\nF . G\nD . .\nG . .","output":"ABDCEFG\nDBAECFG\nDBEGFCA"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\juyon\\python\\algorithm\\alg1991.py","group":"local","local":true}
