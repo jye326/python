@@ -1,6 +1,8 @@
+import sys
 n = int(input())
 graph = [[] for _ in range(n+1)]
-
+# 재귀 제한 설정 중요
+sys.setrecursionlimit(10**9)
 def dfs(x, w):
     for start in graph[x]:
         end, dist = start
