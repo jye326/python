@@ -1,0 +1,1 @@
+{"name":"Local: alg1764","url":"c:\\Users\\juyon\\python\\algorithm\\alg1764.py","tests":[{"id":1727614509020,"input":"3 4\nohhenrie\ncharlie\nbaesangwook\nobama\nbaesangwook\nohhenrie\nclinton","output":"2\nbaesangwook\nohhenrie"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\juyon\\python\\algorithm\\alg1764.py","group":"local","local":true}
