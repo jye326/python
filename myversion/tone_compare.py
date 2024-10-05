@@ -217,10 +217,10 @@ with open(file_path, 'w') as json_file:
 
 # python 출력값 -> java에 반환하는 값
 print(file_path)
-print(f'sim_wave_{current_time}.png')
+print(f'./sim_wave_{current_time}.png')
 
 
-# # 애니메이션 처리를 위해 인터랙티브 모드로 전환
+# # 애니메이션 처리를 위해 인터랙티브 모드로 전환S
 # get_ipython().run_line_magic('matplotlib', 'notebook')
 
 # def create_animation(y, sr, f0_interpolated, times, label, color):
