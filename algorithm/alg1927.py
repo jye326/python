@@ -1,70 +1,73 @@
-from collections import deque
+# class MinHeap:
+#     def __init__(self):
+#         self.heap = [0] # 루트 노드의 인덱스를 1로 설정할 것 0번 인덱스는 공란
+#         # self.heap = list(0) 은 틀린 문법 -> list()는 iterable한 객체를 list로 변환하는 것. 0은 iterable하지 않음.
 
-class Node:
-    def __init__(self):
-        self.num = 0
-        self.left = None    # Node으로 초기화
-        self.right = None
-    def __init__(self, num):
-        self.num = num
-        self.left = None    # Node으로 초기화
-        self.right = None
-    def set_left(self, x):
-        self.left = x
+#     def insert(self, x):
+#         self.heap.append(x)
+#         idx = len(self.heap)-1
+#         self.heapify_up(idx) # 인덱스 히피파이
 
-    def set_right(self, x):
-        self.right = x
+#     def heapify_up(self, idx): # idx값을 대소관계맞춰서 재정렬함
+#         if idx>0 and self.heap[idx]<self.heap[idx//2]:
+#             # 부모노드가 더 크면 스왑
+#             self.heap[idx] , self.heap[idx//2] = self.heap[idx//2], self.heap[idx]
+#             self.heapify_up(idx//2)# 바뀐 부모노드에 대해서도 재귀
 
-class Tree:
+#     def pop(self):
+#         #print('heap : ',self.heap)
+#         if len(self.heap)>1:# 비어있지 않은 것
+#             min_val = self.heap[1] # 미리 최소값빼두고
+#             print(min_val)  # 일단 출력
+#             last_val = self.heap.pop() # 맨뒷값 빼고
+#             if len(self.heap) == 1: # 뺐는데 하나 남았으면 종료
+#                 return
+#             self.heap[1] = last_val     # 루트값이랑 바꾸고
+#             self.heapify_down(1)    # 히피파이 다운
+#         else:
+#             print(0)
+#     def heapify_down(self, idx):
+#         min_val = idx   # 일단은 이게 부모
+#         left = idx * 2  # 왼쪽 자식
+#         right = idx * 2 + 1 # 오른쪽 자식
 
-    def __init__(self):
-        self.root = Node(0)
+#         # 왼쪽 자식인 존재하며
+#         if left < len(self.heap):
+#             # 부모보다 작은 경우
+#             if self.heap[left] < self.heap[min_val]:
+#                 min_val = left  # 스왑
+#         if right < len(self.heap):# 오른쪽 자식
+#             if self.heap[right] < self.heap[min_val]:
+#                 min_val = right # 스왑
+#         # 스왑을 안하는 경우도 있음
 
-    def insert(self, x):
-        self.current_node = self.root
+#         # 근데 일단 스왑을 했으면, 끝까지 재귀 해야 함
+#         if min_val != idx:
+#             # 인덱스는 교환했으니까 값도 교환
+#             self.heap[idx], self.heap[min_val] = self.heap[min_val], self.heap[idx]
+#             self.heapify_down(min_val)
 
-        if self.current_node == None:
-            self.current_node = Node(x)
+# N = int(input())
+# heap = MinHeap()
+# for _ in range(N):
+#     c = int(input())
+#     if c == 0:
+#         heap.pop()
+#     else:
+#         heap.insert(c)
+# ㅈㄴ 빠르네??
 
-        while True:
-            if x < self.current_node.num:
-                if self.current_node.left!= None:
-                    self.current_node = self.current_node.left
-                else:
-                    self.current_node.left = Node(x)
-                    break
-            else:
-                if self.current_node.right != None:
-                    self.current_node = self.current_node.right
-                else:
-                    self.current_node.right = Node(x)
-                    break
-            
-    def pop(self):
-        if self.root is None:
-            print(0)
-        else:
-            self.root, min_value = self.remove_min(self.root)
-            print(min_value)
-
-    def remove_min(self, node):
-        if node.left is None:
-            return node.right, node.num
-        else:
-            node.left, min_value = self.remove_min(node.left)
-            return node, min_value
-
-
-N = int(input())
-tree = Tree()
-for _ in range(N):
-    c = int(input())
-    if c != 0:
-        if tree.root == None:
-            tree.root = Node(c)
-        else:
-            tree.insert(c)
+import heapq
+import sys
+input= sys.stdin.readline
+orders = int(input())
+heap= []
+for i in range(orders):
+    query = int(input())
+    if query > 0:
+        heapq.heappush(heap, query)
     else:
-        tree.pop()
-
-
+        if len(heap)!=0:
+            print(heapq.heappop(heap))
+        else:
+            print(0)
