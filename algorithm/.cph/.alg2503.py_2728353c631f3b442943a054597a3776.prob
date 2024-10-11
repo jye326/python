@@ -1,0 +1,1 @@
+{"name":"Local: alg2503","url":"c:\\Users\\juyon\\python\\algorithm\\alg2503.py","tests":[{"id":1728651596603,"input":"4\n123 1 1\n356 1 0\n327 2 0\n489 0 1","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\juyon\\python\\algorithm\\alg2503.py","group":"local","local":true}
