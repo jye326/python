@@ -1,0 +1,1 @@
+{"name":"Local: alg21736","url":"c:\\Users\\juyon\\python\\algorithm\\alg21736.py","tests":[{"id":1731774503533,"input":"3 5\nOOOPO\nOIOOX\nOOOXP","output":"1"},{"id":1731775949776,"input":"3 3\nIOX\nOXP\nXPP","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\juyon\\python\\algorithm\\alg21736.py","group":"local","local":true}
