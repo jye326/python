@@ -6,6 +6,22 @@ N = int(input())
 inputList = list(map(int, input().split()))
 
 sortedList = sorted(list(set(inputList)))
+'''
+list 중복 제거 방법
+set(list())
+'''
+
+'''
+리스트 정렬 방법 
+sorted(list)
+역순 정렬
+sorted(list, reverse = True)
+'''
+
+'''
+람다식을 이용한 두번째 키값 기준 정렬
+sorted(list, key = {lambda x: x[2]})
+'''
 
 dictList = dict(zip(sortedList, list(range(len(sortedList)))))
 
