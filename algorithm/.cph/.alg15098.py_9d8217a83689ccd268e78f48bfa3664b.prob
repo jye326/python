@@ -1,0 +1,1 @@
+{"name":"Local: alg15098","url":"c:\\Users\\juyon\\python\\algorithm\\alg15098.py","tests":[{"id":1732606603126,"input":"THE RAIN IN SPAIN","output":"yes"},{"id":1732606743066,"input":"IN THE RAIN AND THE SNOW","output":"no"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\juyon\\python\\algorithm\\alg15098.py","group":"local","local":true}
