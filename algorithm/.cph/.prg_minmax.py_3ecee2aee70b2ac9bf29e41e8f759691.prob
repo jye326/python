@@ -1,0 +1,1 @@
+{"name":"Local: prg_minmax","url":"c:\\Users\\juyon\\python\\algorithm\\prg_minmax.py","tests":[{"id":1732779540234,"input":"1 2 3 4","output":"1 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\juyon\\python\\algorithm\\prg_minmax.py","group":"local","local":true}
