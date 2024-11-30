@@ -1,0 +1,1 @@
+{"name":"Local: prg_correct_parentheses","url":"c:\\Users\\juyon\\python\\algorithm\\prg_correct_parentheses.py","tests":[{"id":1732941226524,"input":"(()(","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\juyon\\python\\algorithm\\prg_correct_parentheses.py","group":"local","local":true}
